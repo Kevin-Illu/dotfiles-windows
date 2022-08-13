@@ -47,7 +47,7 @@ Requires [Neovim](https://neovim.io/) (>= 0.7)
 
 ## About me
 
-- [my personal website kevin-illu](https://https://kevin-illu.netlify.app/)
+- [my personal website kevin-illu](https://kevin-illu.netlify.app/)
 - [Instagram _kevinillu_](https://www.instagram.com/_kevinillu_/)
 - [Twitter @3Kevinillu](https://twitter.com/3Kevinillu)
 
