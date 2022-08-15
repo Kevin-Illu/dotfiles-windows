@@ -1,6 +1,6 @@
 # Kevin's dotfiles
-![PowerShell screenshot](./screenshots/powershell.png)
-![Neovim screenshot](./screenshots/nvim.png)
+![PowerShell screenshot](./screenshots/powershell.PNG)
+![Neovim screenshot](./screenshots/nvim.PNG)
 
 ## Contents 
 - vim (NeoVim) config
