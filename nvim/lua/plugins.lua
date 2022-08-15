@@ -48,4 +48,6 @@ packer.startup(function(use)
 
   use 'lewis6991/gitsigns.nvim'
   use 'dinhhuy258/git.nvim' -- For git blame & browse
+  -- nvim commentary
+  use 'tpope/vim-commentary'
 end)

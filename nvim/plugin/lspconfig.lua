@@ -134,3 +134,6 @@ nvim_lsp.tsserver.setup {
   filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
   capabilities = capabilities
 }
+
+nvim_lsp.pyright.setup {}
+
