@@ -136,4 +136,10 @@ nvim_lsp.tsserver.setup {
 }
 
 nvim_lsp.pyright.setup {}
+nvim_lsp.clangd.setup {}
+local capabilities_html = vim.lsp.protocol.make_client_capabilities()
+capabilities_html.textDocument.completion.completionItem.snippetSupport = true
 
+nvim_lsp.html.setup {
+  capabilities = capabilities,
+}

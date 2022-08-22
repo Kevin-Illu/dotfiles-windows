@@ -1,5 +1,7 @@
 local keymap = vim.keymap
 
+-- TODO: configurar las teclas para 
+-- INFO: canviar le tamaño de las ventanas.
 keymap.set('n', 'x', '"_x')
 -- Increment/decrement
 keymap.set('n', '+', '<C-a>')
@@ -37,3 +39,6 @@ keymap.set('n', '<C-w><down>', '<C-w>-')
 keymap.set('n', '<Space>w', ':w<Return>')
 keymap.set('n', '<Space>q', ':q<Return>')
 keymap.set('n', '<C-e>',':e .<Return>')
+
+-- View TODO comments
+keymap.set('n', '<C-l>', ':TodoLocList <Return>')

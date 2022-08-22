@@ -22,9 +22,14 @@ Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory
 Set-Alias v nvim
 Set-Alias g git
 Set-Alias ll ls
+Set-Alias python py
 
 # Utilities
 function which ($command) {
 	Get-Command -Name $command -ErrorAction SilentlyContinue |
 		Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+}
+
+function com ($name_file) {
+  g++ $name_file".c" -o $name_file".exe"
 }

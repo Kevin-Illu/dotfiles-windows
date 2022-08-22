@@ -50,4 +50,10 @@ packer.startup(function(use)
   use 'dinhhuy258/git.nvim' -- For git blame & browse
   -- nvim commentary
   use 'tpope/vim-commentary'
+  use {
+    "folke/todo-comments.nvim",
+    requires = "nvim-lua/plenary.nvim",
+  }
+  -- Code Runer
+  use 'voldikss/vim-floaterm'
 end)
