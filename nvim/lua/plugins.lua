@@ -56,4 +56,5 @@ packer.startup(function(use)
   }
   -- Code Runer
   use 'voldikss/vim-floaterm'
+  use {"goolord/alpha-nvim"}
 end)
