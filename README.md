@@ -37,6 +37,7 @@ Requires [Neovim](https://neovim.io/) (>= 0.7)
 - [dinhhuy258/git.nvim](https://github.com/dinhhuy258/git.nvim) - A simple clone of the plugin vim-fugitive
 - [folke/zen-mode.nvim](https://github.com/folke/zen-mode.nvim) - Distraction-free mode
 - [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) - Markdown live preview
+- [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) - Custom Dashboard
 
 ## PowerShell setup (Windows)
 
