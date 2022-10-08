@@ -1,5 +1,5 @@
 # Kevin's dotfiles
-![PowerShell screenshot](./screenshots/powershell.PNG)
+![Neovim Dashboard](./screenshots/dashboard.PNG)
 ![Neovim screenshot](./screenshots/nvim.PNG)
 ![Scoop screen](./screenshots/ScoopApps.PNG)
 
