@@ -30,15 +30,23 @@ keymap.set('', 'sj', '<C-w>j')
 keymap.set('', 'sl', '<C-w>l')
 
 -- Resize window
-keymap.set('n', '<C-w><left>', '<C-w><')
-keymap.set('n', '<C-w><right>', '<C-w>>')
-keymap.set('n', '<C-w><up>', '<C-w>+')
-keymap.set('n', '<C-w><down>', '<C-w>-')
+keymap.set('n', '<C-left>', '<C-w><')
+keymap.set('n', '<C-right>', '<C-w>>')
+keymap.set('n', '<C-up>', '<C-w>+')
+keymap.set('n', '<C-down>', '<C-w>-')
 
 -- Edit files
-keymap.set('n', '<Space>w', ':w<Return>')
-keymap.set('n', '<Space>q', ':q<Return>')
+keymap.set('n', '<C-s>', ':w<Return>')
+keymap.set('n', '<C-q>', ':q<Return>')
 keymap.set('n', '<C-e>',':e .<Return>')
+
+keymap.set('n', '<C-c>', '"+y', { noremap = true })
+keymap.set('n', '<C-v>', '"+p', { noremap = true })
+keymap.set('n', '<C-v>', '"+x', { noremap = true })
+keymap.set('v', '<C-c>', '"+y', { noremap = true })
+keymap.set('v', '<C-v>', '"+p', { noremap = true })
+keymap.set('v', '<C-v>', '"+x', { noremap = true })
+
 
 -- View TODO comments
 keymap.set('n', '<C-l>', ':TodoLocList <Return>')

@@ -1,60 +1,86 @@
-local status, packer  = pcall(require, "packer")
-if (not status) then
+local status, packer = pcall(require, "packer")
+if not status then
   print("packer is not installed")
   return
 end
 
-vim.cmd [[packadd packer.nvim]]
-
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
+
+  -- lsp
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-buffer'
+  use 'jose-elias-alvarez/null-ls.nvim'
   use {
-    'svrana/neosolarized.nvim',
-    requires = { 'tjdevries/colorbuddy.nvim' }
+    'glepnir/lspsaga.nvim',
+    opt = true,
+    branch = 'main',
+    event = 'LspAttach',
+    requires = {
+        {"nvim-tree/nvim-web-devicons"},
+        --Please make sure you install markdown and markdown_inline parser
+        {"nvim-treesitter/nvim-treesitter"}
+    }
   }
-  use 'nvim-lua/plenary.nvim' -- Common utilities
-  use 'nvim-lualine/lualine.nvim' -- Statusline
-  use 'nvim-lua/plenary.nvim' -- Common utilities
-  use 'onsails/lspkind-nvim' -- vscode-like pictograms
-  use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
-  use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP
-  use 'hrsh7th/nvim-cmp' -- Completion
-  use 'neovim/nvim-lspconfig' -- LSP
-  use 'jose-elias-alvarez/null-ls.nvim' -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-  use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
 
-  use {'williamboman/mason.nvim'}
-  use 'williamboman/mason-lspconfig.nvim'
-
-  use 'glepnir/lspsaga.nvim' -- LSP UIs
+  -- autocomplete and snippets
   use 'L3MON4D3/LuaSnip'
+  use 'norcalli/nvim-colorizer.lua'
+
+  -- syntax highlighting
   use {
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
-  use 'kyazdani42/nvim-web-devicons' -- File icons
+  use 'windwp/nvim-ts-autotag'
+
+  -- state line
+  use 'nvim-lualine/lualine.nvim'
+
+  -- buffer line
+  use 'akinsho/nvim-bufferline.lua'
+
+  -- file explorer
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
-  use 'windwp/nvim-autopairs'
-  use 'windwp/nvim-ts-autotag'
-  use 'norcalli/nvim-colorizer.lua'
-  use 'folke/zen-mode.nvim'
-  use({
-    "iamcco/markdown-preview.nvim",
-    run = function() vim.fn["mkdp#util#install"]() end,
-  })
-  use 'akinsho/nvim-bufferline.lua'
-  -- use 'github/copilot.vim'
+  use 'kyazdani42/nvim-web-devicons'
 
+  -- git
   use 'lewis6991/gitsigns.nvim'
-  use 'dinhhuy258/git.nvim' -- For git blame & browse
-  -- nvim commentary
+  use 'dinhhuy258/git.nvim'
+
+  -- productivy
+  use 'folke/zen-mode.nvim'
   use 'tpope/vim-commentary'
   use {
     "folke/todo-comments.nvim",
     requires = "nvim-lua/plenary.nvim",
   }
-  -- Code Runer
   use 'voldikss/vim-floaterm'
-  use {"goolord/alpha-nvim"}
+
+  -- utilities
+  use 'vim-utils/vim-man'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-lua/popup.nvim'
+  use 'onsails/lspkind-nvim'
+  use 'MunifTanjim/prettier.nvim'
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+  use({"goolord/alpha-nvim"})
+  use 'windwp/nvim-autopairs'
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
+  -- themes
+  use {
+    'sainnhe/everforest',
+    requires = {'tjdevries/colorbuddy.nvim'}
+  }
+
 end)
+
