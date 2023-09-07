@@ -12,13 +12,13 @@ local lsp_formatting = function(bufnr)
   })
 end
 
-null_ls.setup {
+null_ls.setup({
   sources = {
     null_ls.builtins.formatting.prettierd,
-    null_ls.builtins.diagnostics.eslint_d.with({
-      diagnostics_format = '[eslint] #{m}\n(#{c})'
-    }),
-    null_ls.builtins.diagnostics.fish
+    -- null_ls.builtins.diagnostics.eslint_d.with({
+    --   diagnostics_format = '[eslint] #{m}\n(#{c})'
+    -- }),
+    -- null_ls.builtins.diagnostics.fish
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
@@ -32,7 +32,7 @@ null_ls.setup {
       })
     end
   end
-}
+})
 
 vim.api.nvim_create_user_command(
   'DisableLspFormatting',

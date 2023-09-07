@@ -1,11 +1,15 @@
 # Kevin's dotfiles
-![Neovim Dashboard](./screenshots/dashboard.PNG)
-![Neovim screenshot](./screenshots/nvim.PNG)
-![Scoop screen](./screenshots/ScoopApps.PNG)
 
-## Contents 
+use my configuration with carefully, make sure you understand the configuration above :D
+cuse this configuration works fine for me
+
+## Contents
+
 - vim (NeoVim) config
+  ![Neovim screenshot](./screenshots/CodeScreenShot.png)
+
 - PowerShell config
+  ![PowerShell screenshot](./screenshot/../screenshots/TerminalTheme.png)
 
 ## Neovim setup
 
@@ -39,9 +43,23 @@ Requires [Neovim](https://neovim.io/) (>= 0.7)
 - [iamcco/markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) - Markdown live preview
 - [goolord/alpha-nvim](https://github.com/goolord/alpha-nvim) - Custom Dashboard
 
+- need to install this lsp servers
+  - `npm install -g pyright` -- python lsp
+  - `npm install -g @tailwindcss/language-server`
+  - `npm install -g typescript typescript-language-server`
+
 ## PowerShell setup (Windows)
 
 - [Scoop](https://scoop.sh/) - A command-line installer
+  - install the following apps
+    - ripgrep
+    - tree-sitter
+    - terminal-icons
+    - lua-language-server
+    - fxf
+    - gcc
+    - neovim
+
 - [Git for Windows](https://gitforwindows.org/)
 - [Oh My Posh](https://ohmyposh.dev/) - Prompt theme engine
 - [Terminal Icons](https://github.com/devblackops/Terminal-Icons) - Folder and file icons

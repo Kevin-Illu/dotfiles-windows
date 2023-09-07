@@ -1,35 +1,47 @@
+#  ----- Colorscheme -----------
+$theme = "everforest"
 
-#Prompt ---------------------------------
+# themes that convinated whit nord theme
+# catppuccin
+# sim-web
+# hotstick.minimal
+# pure
+# zash
+
+# light themes:
+# rudolfs-light remk capr4n
 
 # Icons
 Import-Module Terminal-Icons
 # Load prompt config
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\kevin.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\$theme.omp.json" | Invoke-Expression
 
 # PSReadLine
+Import-Module PSReadline
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -BellStyle None
 Set-PSReadLineKeyHandler -Chord 'Ctrl+d' -Function DeleteChar
 Set-PSReadLineOption -PredictionSource History
+# Set-PSReadLineOption -PredictionViewStyle ListView
 
 # Fzf
 Import-Module PSFzf
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
+
+# Set-PSReadLineOption
+
 # Alias ---------------------------------
-# p.\OneDrive\Documentos\PowerShell\
-# Set-Alias home 'C:\Users\Kevin\OneDrive\Documentos\PowerShell\'
 Set-Alias v nvim
 Set-Alias g git
 Set-Alias ll ls
-Set-Alias python py
+Set-Alias python3 py
+Set-Alias e explorer
+Set-Alias touch New-Item
 
 # Utilities
 function which ($command) {
-	Get-Command -Name $command -ErrorAction SilentlyContinue |
-		Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+  Get-Command -Name $command -ErrorAction SilentlyContinue |
+    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
-function com ($name_file) {
-  g++ $name_file".c" -o $name_file".exe"
-}

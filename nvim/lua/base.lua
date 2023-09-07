@@ -44,4 +44,4 @@ vim.opt.formatoptions:append { 'r' }
 
 -- set coloscheme
 vim.api.nvim_command("au VimEnter,WinEnter,BufWinEnter * hi Normal ctermbg=none guibg=none")
-vim.cmd([[colorscheme everforest]])
+-- vim.cmd([[colorscheme everforest]])

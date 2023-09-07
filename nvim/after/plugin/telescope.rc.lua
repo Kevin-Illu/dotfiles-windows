@@ -29,9 +29,9 @@ telescope.setup {
         },
         ["n"] = {
           -- your custom normal mode mappings
-          ["N"] = fb_actions.create, -- N new
-          ["r"] = fb_actions.rename, -- r Rename
-          ["D"] = fb_actions.remove, -- D delete
+          ["N"] = fb_actions.create,          -- N new
+          ["r"] = fb_actions.rename,          -- r Rename
+          ["D"] = fb_actions.remove,          -- D delete
           ["h"] = fb_actions.goto_parent_dir, -- parent Dir
           ["/"] = function()
             vim.cmd('startinsert')
@@ -45,12 +45,12 @@ telescope.setup {
 telescope.load_extension("file_browser")
 
 vim.keymap.set('n', ';f',
-function()
-  builtin.find_files({
-    no_ignore = false,
-    hidden = true
-  })
-end)
+  function()
+    builtin.find_files({
+      no_ignore = false,
+      hidden = true
+    })
+  end)
 vim.keymap.set('n', ';r', function()
   builtin.live_grep()
 end)
