@@ -13,6 +13,7 @@ cuse this configuration works fine for me
 - wofi
 
 - vim (NeoVim) config
+  [nvim config](https://github.com/Kevin-Illu/nvim-config)
   ![Neovim screenshot](./screenshots/CodeScreenShot.png)
 
 - PowerShell config
