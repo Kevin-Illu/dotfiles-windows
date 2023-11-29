@@ -5,6 +5,7 @@ cuse this configuration works fine for me
 
 ## Contents
 
+arch config files coming soon
 - hyprland
 - kitty
 - tmux
